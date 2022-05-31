@@ -1,0 +1,50 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.1.7",
+  "license": "MIT",
+  "author": "Dup4 <lyuzhi.pan@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dup4/mathjax-render.git"
+  },
+  "homepage": "https://github.com/Dup4/mathjax-render#readme",
+  "bugs": {
+    "url": "https://github.com/Dup4/mathjax-render/issues"
+  },
+  "scripts": {
+    "build": "pnpm -r --filter=./packages/* run build",
+    "dev": "pnpm -r --parallel --filter=./packages/* run dev",
+    "start": "pnpm -r --parallel --filter=./packages/* run start",
+    "test": "pnpm -r --parallel --filter=./packages/* run test",
+    "lint": "run-p lint:*",
+    "lint:build": "pnpm -r --parallel --filter=./packages/* run lint:build",
+    "lint:eslint": "eslint .",
+    "lint:style": "prettier --check ./packages/**/*.ts",
+    "format": "run-p format:*",
+    "format:eslint": "eslint --fix .",
+    "format:style": "prettier --write ./packages/**/*.ts",
+    "release:old": "esmo scripts/publish.ts",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.18.0",
+    "@types/glob": "^7.2.0",
+    "@types/node": "^17.0.35",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "bumpp": "^7.1.1",
+    "eslint": "^8.16.0",
+    "esmo": "^0.14.1",
+    "fsxx": "^0.0.5",
+    "glob": "^8.0.3",
+    "npm-run-all": "^4.1.5",
+    "pnpm": "^7.1.7",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4",
+    "unbuild": "^0.7.4",
+    "vite": "^2.9.9",
+    "vitest": "^0.7.13",
+    "zx": "^6.1.0"
+  }
+}
