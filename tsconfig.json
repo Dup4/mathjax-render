@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@dup4/mathjax-render-utils": [
-        "packages/utils/src/index.ts"
+      "mathjax-render": [
+        "packages/mathjax-render/src/index.ts"
       ],
     }
   }
