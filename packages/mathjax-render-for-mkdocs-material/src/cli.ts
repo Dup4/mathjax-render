@@ -1,20 +1,14 @@
 import cac from "cac";
 import { lightRed } from "kolorist";
-
 import createDebug from "debug";
-
-import { name as pkgName, version } from "../package.json";
-
+import { name, version } from "../package.json";
 import { CliOption } from "./types";
-
-const name = pkgName;
 
 const debug = createDebug(name + ":cli");
 
 const cli = cac(name);
 
 cli.option("--srcDir <srcDir>", "source dir");
-
 cli.option(
   "--useWorker [useWorker]",
   "Whether to use worker multi-threaded execution",
@@ -34,7 +28,6 @@ cli.command("").action(async (option: CliOption) => {
 });
 
 cli.help();
-
 cli.version(version);
 
 async function bootstrap() {
