@@ -1,1 +1,1 @@
-export * from "./tex2svg";
+export * from "./Tex2SVG";
