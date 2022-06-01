@@ -8,6 +8,7 @@
     "esmo",
     "esno",
     "mathjax",
+    "mkdocs",
     "pnpm",
     "typecheck",
     "vite",
