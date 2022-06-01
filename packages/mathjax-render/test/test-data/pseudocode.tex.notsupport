@@ -1,0 +1,27 @@
+\usepackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
+\begin{document}
+\IncMargin{1em}
+\begin{algorithm}
+  % \caption{parse AST object to python dict}\label{algo_disjdecomp}
+  \SetKwData{Left}{left}\SetKwData{This}{this}\SetKwData{Up}{up}
+  \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+  \Input{A Ast Object $Node$}
+  \Output{A dict of Ast}
+  \BlankLine
+  \SetKwFunction{FMain}{parseAst}
+  \SetKwProg{Fn}{Function}{:}{}
+  \Fn{\FMain{Node}}{
+    $res \leftarrow \{\}$\\
+    $res[lable]\leftarrow Node.type+Node.value$\\
+    $res[lineno]\leftarrow Node.lineno$\\
+    \If(){$Node\ \textbf{hava}\ children$}{
+        $res[childnode]\leftarrow []$\\
+        \For(){$subnode\ \textbf{in}\ Node.children$}{
+            $res[childnode].append\left(\FMain{subnode}\right)$
+        }
+    }
+    \Return{$res$}
+  }
+  \BlankLine
+\end{algorithm}\DecMargin{1em}
+\end{document}

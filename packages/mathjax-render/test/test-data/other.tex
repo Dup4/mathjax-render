@@ -1,0 +1,36 @@
+\require{extpfeil} % produce extensible horizontal arrows
+\begin{array}{ccc} % arrange LPPs
+% first row
+% first LPP
+\begin{array}{ll}
+\max & z = c^T x \\
+\text{s.t.} & A x \le b \\
+& x \ge 0
+\end{array}
+& \xtofrom{\text{duality}} &
+% second LPP
+\begin{array}{ll}
+\min & v = b^T y \\
+\text{s.t.} & A^T y \ge c \\
+& y \ge 0
+\end{array} \\
+({\cal PC}) & & ({\cal DC}) \\
+\text{add } {\Large \downharpoonleft} \text{slack var} &  & \text{minus } {\Large \downharpoonright} \text{surplus var}\\ % Change to your favorite arrow style
+%
+% second row
+% third LPP
+\begin{array}{ll}
+\max & z = c^T x \\
+\text{s.t.} & A x + s = b \\
+& x,s \ge 0
+\end{array}
+& \xtofrom[\text{some steps skipped}]{\text{duality}} &
+% fourth LPP
+\begin{array}{ll}
+\min & v = b^T y \\
+\text{s.t.} & A^T y - t = c \\
+& y,t \ge 0
+\end{array} \\
+({\cal PS}) & & ({\cal DS})
+%
+\end{array}

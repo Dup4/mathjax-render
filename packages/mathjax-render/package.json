@@ -42,5 +42,14 @@
     "lint:build": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
-  "dependencies": {}
+  "dependencies": {
+    "escape-html": "^1.0.3",
+    "jsdom": "^19.0.0",
+    "mathjax-full": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/escape-html": "^1.0.2",
+    "@types/jsdom": "^16.2.14",
+    "glob": "^8.0.3"
+  }
 }
