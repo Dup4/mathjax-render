@@ -30,6 +30,9 @@
       ]
     }
   },
+  "bin": {
+    "mathjax-render-for-mkdocs-material": "./cli.mjs"
+  },
   "files": [
     "src",
     "dist"
@@ -38,11 +41,17 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "start": "esmo src/index.ts",
+    "start": "esmo src/cli.ts",
     "test": "vitest",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "mathjax-render": "workspace:*"
+    "mathjax-render": "workspace:*",
+    "cac": "^6.7.12",
+    "debug": "^4.3.4",
+    "kolorist": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7"
   }
 }
