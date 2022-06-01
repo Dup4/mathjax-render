@@ -16,7 +16,7 @@ import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html";
 import { AllPackages } from "./AllPackages";
 
 import util from "util";
-import EscapeHTML from "escape-html";
+import { FormatErrorMessage } from "./utils";
 
 // const adaptor = liteAdaptor();
 const adaptor = jsdomAdaptor(JSDOM);
@@ -31,26 +31,6 @@ const html = mathjax.document("", {
   InputJax: tex,
   OutputJax: svg,
 });
-
-//  Minimal CSS needed for stand-alone image
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const CSS = [
-  "svg a{fill:blue;stroke:blue}",
-  '[data-mml-node="merror"]>g{fill:red;stroke:red}',
-  '[data-mml-node="merror"]>rect[data-background]{fill:yellow;stroke:none}',
-  "[data-frame],[data-line]{stroke-width:70px;fill:none}",
-  ".mjx-dashed{stroke-dasharray:140}",
-  ".mjx-dotted{stroke-linecap:round;stroke-dasharray:0,140}",
-  "use[data-c]{stroke-width:3px}",
-].join("");
-
-function formatErrorMessage(message: string): string {
-  const htmlContext = EscapeHTML(message.trim()).split("\n").join("<br>");
-
-  return (
-    '<span class="math-rendering-error-message">' + htmlContext + "</span>"
-  );
-}
 
 function tex2SVG(mathContent: string, display: boolean) {
   const node = html.convert(mathContent, { display });
@@ -73,6 +53,6 @@ export function Tex2SVG(mathContent: string, display: boolean) {
       util.inspect(mathContent) +
       "\n" +
       e.toString();
-    return formatErrorMessage(errorMessage);
+    return FormatErrorMessage(errorMessage);
   }
 }
