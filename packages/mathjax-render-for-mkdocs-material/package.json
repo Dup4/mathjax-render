@@ -35,7 +35,8 @@
   },
   "files": [
     "src",
-    "dist"
+    "dist",
+    "*.mjs"
   ],
   "sideEffects": false,
   "scripts": {
@@ -46,10 +47,11 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "mathjax-render": "workspace:*",
     "cac": "^6.7.12",
+    "chalk": "^5.0.1",
     "debug": "^4.3.4",
-    "kolorist": "^1.5.1"
+    "kolorist": "^1.5.1",
+    "mathjax-render": "workspace:*"
   },
   "devDependencies": {
     "@types/debug": "^4.1.7"
