@@ -54,7 +54,8 @@
     "glob": "^8.0.3",
     "jsdom": "^19.0.0",
     "kolorist": "^1.5.1",
-    "mathjax-render": "workspace:*"
+    "mathjax-render": "workspace:*",
+    "piscina": "^3.2.0"
   },
   "devDependencies": {
     "@types/debug": "^4.1.7"

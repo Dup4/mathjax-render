@@ -3,6 +3,7 @@ import { lightRed } from "kolorist";
 import createDebug from "debug";
 import { name, version } from "../package.json";
 import { Options } from "./types";
+import { Render } from "./Render";
 
 const debug = createDebug(name + ":cli");
 
@@ -23,8 +24,7 @@ cli.command("").action(async (options: Options) => {
     process.exit(1);
   }
 
-  console.log(options);
-  console.log("Hello world");
+  Render(options);
 });
 
 cli.help();

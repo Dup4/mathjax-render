@@ -1,15 +1,15 @@
 // if refer to resources in the `ts` directory,
 // `declaration` generation will fail at compile time.
 
-import { mathjax } from "mathjax-full/js/mathjax";
-import { TeX } from "mathjax-full/js/input/tex";
-import { SVG } from "mathjax-full/js/output/svg";
+import { mathjax } from "mathjax-full/js/mathjax.js";
+import { TeX } from "mathjax-full/js/input/tex.js";
+import { SVG } from "mathjax-full/js/output/svg.js";
 
 // import { liteAdaptor } from "mathjax-full/ts/adaptors/liteAdaptor";
 import { JSDOM } from "jsdom";
-import { jsdomAdaptor } from "mathjax-full/js/adaptors/jsdomAdaptor";
+import { jsdomAdaptor } from "mathjax-full/js/adaptors/jsdomAdaptor.js";
 
-import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html";
+import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html.js";
 
 // official AllPackages are not comprehensive enough
 // import { AllPackages } from "mathjax-full/ts/input/tex/AllPackages";
