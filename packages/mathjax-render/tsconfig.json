@@ -4,7 +4,6 @@
     "src"
   ],
   "compilerOptions": {
-    "skipLibCheck": true,
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {

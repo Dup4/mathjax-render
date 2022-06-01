@@ -1,3 +1,6 @@
+// if refer to resources in the `ts` directory,
+// `declaration` generation will fail at compile time.
+
 import { mathjax } from "mathjax-full/js/mathjax";
 import { TeX } from "mathjax-full/js/input/tex";
 import { SVG } from "mathjax-full/js/output/svg";
