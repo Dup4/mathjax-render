@@ -59,6 +59,12 @@ importers:
       '@types/jsdom': 16.2.14
       glob: 8.0.3
 
+  packages/mathjax-render-for-mkdocs-material:
+    specifiers:
+      mathjax-render: workspace:*
+    dependencies:
+      mathjax-render: link:../mathjax-render
+
 packages:
 
   /@ampproject/remapping/2.2.0:

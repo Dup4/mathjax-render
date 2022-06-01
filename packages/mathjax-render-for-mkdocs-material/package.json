@@ -41,5 +41,8 @@
     "start": "esmo src/index.ts",
     "test": "vitest",
     "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "mathjax-render": "workspace:*"
   }
 }
