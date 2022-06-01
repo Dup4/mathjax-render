@@ -4,6 +4,9 @@
     "src"
   ],
   "compilerOptions": {
+    "lib": [
+      "dom"
+    ],
     "baseUrl": ".",
     "paths": {
       "@/*": [
