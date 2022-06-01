@@ -7,14 +7,9 @@ const { green, yellow } = chalk;
 export default function (filename: string): void {
   const startTime = +new Date();
 
-  try {
-    const content = fs.readFileSync(filename, "utf8");
-    const result = RenderMathJax(content);
-    fs.writeFileSync(filename, result, "utf8");
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (e: any) {
-    throw new Error(e.message);
-  }
+  const content = fs.readFileSync(filename, "utf8");
+  const result = RenderMathJax(content);
+  fs.writeFileSync(filename, result, "utf8");
 
   const endTime = +new Date();
 

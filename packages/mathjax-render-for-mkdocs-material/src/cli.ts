@@ -24,7 +24,7 @@ cli.command("").action(async (options: Options) => {
     process.exit(1);
   }
 
-  Render(options);
+  await Render(options);
 });
 
 cli.help();
