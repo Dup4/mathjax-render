@@ -11,5 +11,3 @@ lib-cov
 logs
 node_modules
 temp
-
-__snapshots__

@@ -47,9 +47,12 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
+    "@types/jsdom": "^16.2.14",
     "cac": "^6.7.12",
     "chalk": "^5.0.1",
     "debug": "^4.3.4",
+    "glob": "^8.0.3",
+    "jsdom": "^19.0.0",
     "kolorist": "^1.5.1",
     "mathjax-render": "workspace:*"
   },

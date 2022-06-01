@@ -8,6 +8,9 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "mathjax-render": [
+        "../mathjax-render/src/index.ts"
       ]
     }
   }
