@@ -7,8 +7,8 @@ import { Tex2SVG } from "../src/index";
 // https://www.svgviewer.dev/
 
 describe("Tex2SVG", () => {
-  for (const target of glob.sync(path.join(__dirname, "./test-data/*.tex"))) {
-    const basename = path.basename(target, ".tex");
+  for (const target of glob.sync(path.join(__dirname, "./test-data/*.data"))) {
+    const basename = path.basename(target, ".data");
     it(basename, () => {
       const content = fs.readFileSync(target).toString();
       const result = Tex2SVG(content, true);
