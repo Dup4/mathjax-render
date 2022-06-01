@@ -2,7 +2,7 @@ import cac from "cac";
 import { lightRed } from "kolorist";
 import createDebug from "debug";
 import { name, version } from "../package.json";
-import { CliOption } from "./types";
+import { Options } from "./types";
 
 const debug = createDebug(name + ":cli");
 
@@ -17,13 +17,13 @@ cli.option(
   },
 );
 
-cli.command("").action(async (option: CliOption) => {
-  if (option.srcDir === undefined) {
+cli.command("").action(async (options: Options) => {
+  if (options.srcDir === undefined) {
     console.error(lightRed("Error: ") + "srcDir is required");
     process.exit(1);
   }
 
-  console.log(option);
+  console.log(options);
   console.log("Hello world");
 });
 
