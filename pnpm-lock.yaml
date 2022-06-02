@@ -50,11 +50,11 @@ importers:
       escape-html: ^1.0.3
       glob: ^8.0.3
       jsdom: ^19.0.0
-      mathjax-full: ^3.2.1
+      mathjax-full: 3.2.0
     dependencies:
       escape-html: 1.0.3
       jsdom: 19.0.0
-      mathjax-full: 3.2.1
+      mathjax-full: 3.2.0
     devDependencies:
       '@types/escape-html': 1.0.2
       '@types/jsdom': 16.2.14
@@ -2429,13 +2429,13 @@ packages:
     resolution: {integrity: sha512-CkYQrPYZfWnu/DAmVCpTSX/xHpKZ80eKh2lAkyA6AJTef6bW+6JpbQZN5rofum7da+SyN1bi5ctTm+lTfcCW3g==}
     dev: true
 
-  /mathjax-full/3.2.1:
-    resolution: {integrity: sha512-aUz9o16MGZdeiIBwZjAfUBTiJb7LRqzZEl1YOZ8zQMGYIyh1/nxRebxKxjDe9L+xcZCr2OHdzoFBMcd6VnLv9Q==}
+  /mathjax-full/3.2.0:
+    resolution: {integrity: sha512-D2EBNvUG+mJyhn+M1C858k0f2Fc4KxXvbEX2WCMXroV10212JwfYqaBJ336ECBSz5X9L5LRoamxb7AJtg3KaJA==}
     dependencies:
       esm: 3.2.25
       mhchemparser: 4.1.1
       mj-context-menu: 0.6.1
-      speech-rule-engine: 4.0.6
+      speech-rule-engine: 3.3.3
     dev: false
 
   /memorystream/0.3.1:
@@ -3066,8 +3066,8 @@ packages:
     resolution: {integrity: sha512-Ctl2BrFiM0X3MANYgj3CkygxhRmr9mi6xhejbdO960nF6EDJApTYpn0BQnDKlnNBULKiCN1n3w9EBkHK8ZWg+g==}
     dev: true
 
-  /speech-rule-engine/4.0.6:
-    resolution: {integrity: sha512-Hqa4ywf7d3lX2YsnnE8BeEdqFyaTwPSyyVhVGWZlQw4XVh0NCijyVsMZD3I9HsG5JBuDXyRaMVVNZcGJlKbZxA==}
+  /speech-rule-engine/3.3.3:
+    resolution: {integrity: sha512-0exWw+0XauLjat+f/aFeo5T8SiDsO1JtwpY3qgJE4cWt+yL/Stl0WP4VNDWdh7lzGkubUD9lWP4J1ASnORXfyQ==}
     hasBin: true
     dependencies:
       commander: 9.2.0
