@@ -20,11 +20,19 @@ const mathDocument = mathjax.document(document, {
 // Add CSS styles
 mathDocument.updateDocument();
 
-export function Tex2SVG(math: string, display: boolean) {
+export interface Options {
+  nodeClassName?: string;
+}
+
+export function Tex2SVG(math: string, display: boolean, options?: Options) {
   try {
     const wrapper = mathDocument.convert(math, {
       display,
     });
+
+    if (options?.nodeClassName) {
+      wrapper.classList.replace("MathJax", options.nodeClassName);
+    }
 
     const title = document.createElement("title");
     title.innerText = math;
