@@ -14,9 +14,7 @@ import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html.js";
 // official AllPackages are not comprehensive enough
 // import { AllPackages } from "mathjax-full/ts/input/tex/AllPackages";
 import { AllPackages } from "../AllPackages";
-
-import util from "util";
-import { FormatErrorMessage } from "../utils";
+import { GenerateErrorMessage, GetErrorMessage } from "../utils";
 
 // const adaptor = liteAdaptor();
 const adaptor = jsdomAdaptor(JSDOM);
@@ -46,13 +44,11 @@ function tex2SVG(mathContent: string, display: boolean) {
 export function Tex2SVG(mathContent: string, display: boolean) {
   try {
     return tex2SVG(mathContent, display);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (e: any) {
-    const errorMessage =
-      `Failed to render ${display ? "display" : "inline"} math: ` +
-      util.inspect(mathContent) +
-      "\n" +
-      e.toString();
-    return FormatErrorMessage(errorMessage);
+  } catch (e: unknown) {
+    return (
+      '<span class="mathjax-render-error-message">' +
+      GenerateErrorMessage(mathContent, display, GetErrorMessage(e)) +
+      "</span>"
+    );
   }
 }

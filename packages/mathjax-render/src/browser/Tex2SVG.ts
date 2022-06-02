@@ -6,6 +6,7 @@ import { HTMLHandler } from "mathjax-full/js/handlers/html/HTMLHandler";
 import { SafeHandler } from "mathjax-full/js/ui/safe/SafeHandler";
 
 import { AllPackages } from "../AllPackages";
+import { GenerateErrorMessage, GetErrorMessage } from "../utils";
 
 mathjax.handlers.register(SafeHandler(new HTMLHandler(browserAdaptor())));
 
@@ -32,20 +33,23 @@ export function Tex2SVG(math: string, display: boolean) {
     defsElement.parentNode.insertBefore(title, defsElement);
 
     return wrapper;
-  } catch (e) {
+  } catch (e: unknown) {
     console.log(e);
 
     const wrapper = document.createElement("mjx-container");
     wrapper.className = "MathJax";
     wrapper.setAttribute("jax", "SVG");
-    if (display) wrapper.setAttribute("display", "true");
+    if (display) {
+      wrapper.setAttribute("display", "true");
+    }
 
     const message = document.createElement("span");
-    message.innerText = `Failed to render math, ${String(e)}`;
+    message.innerText = GenerateErrorMessage(math, display, GetErrorMessage(e));
     message.style.fontWeight = "bold";
     message.style.display = "inline-block";
-    message.style.border = "2px solid var(--theme-foreground)";
+    message.style.border = "2px solid #000";
     message.style.padding = "0 4px";
+    message.style.textAlign = "left";
 
     wrapper.appendChild(message);
     return wrapper;
