@@ -5,7 +5,9 @@
   ],
   "compilerOptions": {
     "lib": [
-      "dom"
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
     ],
     "baseUrl": ".",
     "paths": {
