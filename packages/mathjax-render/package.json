@@ -16,7 +16,11 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
+    "browser": {
+      "import": "./dist/esm/browser/index.ts",
+      "types": "./dist/esm/browser/index.d.ts"
+    },
+    "node": {
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
