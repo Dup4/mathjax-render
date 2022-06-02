@@ -30,8 +30,8 @@
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
+        "./dist/index.d.ts",
+        "./dist/esm/*/index.d.ts"
       ]
     }
   },
