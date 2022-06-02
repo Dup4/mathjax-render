@@ -1,10 +1,17 @@
-import { defineBuildConfig } from "unbuild";
+import { defineBuildConfig, MkdistBuildEntry } from "unbuild";
 
 const isBrowser = Boolean(process.env.BROWSER);
 
+const browserEntry: MkdistBuildEntry = {
+  input: "src",
+  builder: "mkdist",
+  format: "esm",
+  ext: "ts",
+};
+
 export default defineBuildConfig({
-  entries: [`src/${isBrowser ? "browser" : "node"}/index`],
-  outDir: isBrowser ? "./dist/browser" : "./dist",
+  entries: isBrowser ? [browserEntry] : ["src/node/index"],
+  outDir: isBrowser ? "./dist/esm" : "./dist",
   declaration: true,
   clean: true,
   rollup: {
