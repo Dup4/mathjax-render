@@ -21,7 +21,7 @@ const mathDocument = mathjax.document(document, {
 mathDocument.updateDocument();
 
 export interface Options {
-  nodeClassName?: string;
+  nodeClassNameList?: string[];
 }
 
 export function Tex2SVG(math: string, display: boolean, options?: Options) {
@@ -30,8 +30,8 @@ export function Tex2SVG(math: string, display: boolean, options?: Options) {
       display,
     });
 
-    if (options?.nodeClassName) {
-      wrapper.classList.replace("MathJax", options.nodeClassName);
+    if (options?.nodeClassNameList) {
+      wrapper.classList.add(...options.nodeClassNameList);
     }
 
     const title = document.createElement("title");
