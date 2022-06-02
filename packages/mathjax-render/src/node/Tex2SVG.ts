@@ -13,8 +13,8 @@ import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html.js";
 
 // official AllPackages are not comprehensive enough
 // import { AllPackages } from "mathjax-full/ts/input/tex/AllPackages";
-import { AllPackages } from "../AllPackages";
-import { GenerateErrorMessage, GetErrorMessage } from "../utils";
+import { AllPackages } from "../common/AllPackages";
+import { GenerateErrorMessage, GetErrorMessage } from "../common/utils";
 
 // const adaptor = liteAdaptor();
 const adaptor = jsdomAdaptor(JSDOM);

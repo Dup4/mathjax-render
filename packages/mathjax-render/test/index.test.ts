@@ -2,7 +2,7 @@ import glob from "glob";
 import path from "path";
 import fs from "fs";
 import { describe, expect, it } from "vitest";
-import { Tex2SVG } from "../src/index";
+import { Tex2SVG } from "../src/node/index";
 
 // https://www.svgviewer.dev/
 

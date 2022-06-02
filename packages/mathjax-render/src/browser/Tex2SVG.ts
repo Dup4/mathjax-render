@@ -5,8 +5,8 @@ import { browserAdaptor } from "mathjax-full/js/adaptors/browserAdaptor";
 import { HTMLHandler } from "mathjax-full/js/handlers/html/HTMLHandler";
 import { SafeHandler } from "mathjax-full/js/ui/safe/SafeHandler";
 
-import { AllPackages } from "../AllPackages";
-import { GenerateErrorMessage, GetErrorMessage } from "../utils";
+import { AllPackages } from "../common/AllPackages";
+import { GenerateErrorMessage, GetErrorMessage } from "../common/utils";
 
 mathjax.handlers.register(SafeHandler(new HTMLHandler(browserAdaptor())));
 
