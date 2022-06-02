@@ -51,6 +51,7 @@ importers:
       glob: ^8.0.3
       jsdom: ^19.0.0
       mathjax-full: 3.2.0
+      rimraf: ^3.0.2
     dependencies:
       escape-html: 1.0.3
       jsdom: 19.0.0
@@ -60,6 +61,7 @@ importers:
       '@types/jsdom': 16.2.14
       cross-env: 7.0.3
       glob: 8.0.3
+      rimraf: 3.0.2
 
   packages/mathjax-render-for-mkdocs-material:
     specifiers:
@@ -2700,7 +2702,7 @@ packages:
     dev: false
 
   /path-is-absolute/1.0.1:
-    resolution: {integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=}
+    resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
     engines: {node: '>=0.10.0'}
     dev: true
 

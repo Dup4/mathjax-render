@@ -42,7 +42,7 @@
   "scripts": {
     "build": "run-p build:*",
     "build:node": "unbuild",
-    "build:browser": "cross-env BROWSER=1 unbuild",
+    "build:browser": "cross-env BROWSER=1 unbuild && rimraf ./dist/esm/node",
     "dev": "unbuild --stub",
     "start": "esmo src/index.ts",
     "test": "vitest",
@@ -58,6 +58,7 @@
     "@types/escape-html": "^1.0.2",
     "@types/jsdom": "^16.2.14",
     "cross-env": "^7.0.3",
-    "glob": "^8.0.3"
+    "glob": "^8.0.3",
+    "rimraf": "^3.0.2"
   }
 }
