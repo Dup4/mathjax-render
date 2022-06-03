@@ -22,6 +22,7 @@ mathDocument.updateDocument();
 
 export interface Options {
   nodeClassNameList?: string[];
+  errorMessageClassNameList?: string[];
 }
 
 export function Tex2SVG(math: string, display: boolean, options?: Options) {
@@ -53,11 +54,16 @@ export function Tex2SVG(math: string, display: boolean, options?: Options) {
 
     const message = document.createElement("span");
     message.innerText = GenerateErrorMessage(math, display, GetErrorMessage(e));
-    message.style.fontWeight = "bold";
-    message.style.display = "inline-block";
-    message.style.border = "2px solid #000";
-    message.style.padding = "0 4px";
-    message.style.textAlign = "left";
+
+    if (options?.errorMessageClassNameList) {
+      message.classList.add(...options.errorMessageClassNameList);
+    } else {
+      message.style.fontWeight = "bold";
+      message.style.display = "inline-block";
+      message.style.border = "2px solid #000";
+      message.style.padding = "0 4px";
+      message.style.textAlign = "left";
+    }
 
     wrapper.appendChild(message);
     return wrapper;
