@@ -6,6 +6,9 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
+    "lib": [
+      "DOM"
+    ],
     "baseUrl": ".",
     "paths": {
       "@/*": [
