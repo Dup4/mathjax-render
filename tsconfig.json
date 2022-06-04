@@ -9,6 +9,9 @@
       "mathjax-render-for-mkdocs-material": [
         "packages/mathjax-render-for-mkdocs-material/src/index.ts"
       ],
+      "mathjax-render-react": [
+        "packages/mathjax-render-react/src/index.ts"
+      ]
     }
   }
 }
