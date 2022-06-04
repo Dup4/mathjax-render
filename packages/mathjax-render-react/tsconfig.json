@@ -5,13 +5,14 @@
   ],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
       ],
       "mathjax-render": [
-        "../mathjax-render/src/index.ts"
+        "../mathjax-render/src/browser/index.ts"
       ]
     }
   }
