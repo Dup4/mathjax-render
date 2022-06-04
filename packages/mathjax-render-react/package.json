@@ -34,7 +34,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "",
+    "build": "unbuild",
+    "dev": "unbuild --stub",
     "test": "vitest",
     "lint:build": "tsc --noEmit",
     "prepublishOnly": "npm run build"
