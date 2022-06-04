@@ -1,0 +1,42 @@
+{
+  "name": "mathjax-render-react",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Dup4 <lyuzhi.pan@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dup4/mathjax-render.git",
+    "directory": "packages/mathjax-render-react"
+  },
+  "bugs": {
+    "url": "https://github.com/Dup4/mathjax-render/issues"
+  },
+  "homepage": "https://github.com/Dup4/mathjax-render/tree/main/packages/mathjax-render-react#readme",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "",
+    "test": "vitest",
+    "lint:build": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  }
+}
