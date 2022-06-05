@@ -14,7 +14,7 @@
         "src/*"
       ],
       "mathjax-render/browser": [
-        "./node_modules/mathjax-render/dist/esm/browser"
+        "../mathjax-render/src/browser"
       ]
     }
   }
