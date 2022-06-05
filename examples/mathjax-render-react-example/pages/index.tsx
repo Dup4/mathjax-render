@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { MathJaxNodeWithNoSSR } from "@components/mathjaxNodeWithNoSSR";
 import { Grid, Textarea, useInput } from "@nextui-org/react";
 
@@ -19,6 +20,9 @@ const Home: NextPage = () => {
 
       <main>
         <Grid.Container gap={1} className={styles.main}>
+          <Grid>
+            <Link href="/reference">reference</Link>
+          </Grid>
           <Grid>
             <Textarea
               size="lg"
