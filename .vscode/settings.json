@@ -10,6 +10,7 @@
     "esno",
     "mathjax",
     "mkdocs",
+    "nextui",
     "pnpm",
     "typecheck",
     "vite",
