@@ -20,7 +20,8 @@
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
-    }
+    },
+    "./browser": "./dist/esm/browser/index.mjs"
   },
   "browser": {
     "./dist/index.cjs": "./dist/esm/browser/index.ts",
@@ -42,7 +43,7 @@
   "scripts": {
     "build": "run-p build:*",
     "build:node": "unbuild",
-    "build:browser": "cross-env BROWSER=1 unbuild && rimraf ./dist/esm/node",
+    "build:browser": "cross-env BROWSER=1 unbuild",
     "dev": "unbuild --stub",
     "start": "esmo src/index.ts",
     "test": "vitest",

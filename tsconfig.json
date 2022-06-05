@@ -4,13 +4,16 @@
     "baseUrl": ".",
     "paths": {
       "mathjax-render": [
-        "packages/mathjax-render/src/index.ts"
+        "packages/mathjax-render/src"
+      ],
+      "mathjax-render/browser": [
+        "packages/mathjax-render/src/browser"
       ],
       "mathjax-render-for-mkdocs-material": [
-        "packages/mathjax-render-for-mkdocs-material/src/index.ts"
+        "packages/mathjax-render-for-mkdocs-material/src"
       ],
       "mathjax-render-react": [
-        "packages/mathjax-render-react/src/index.ts"
+        "packages/mathjax-render-react/src"
       ]
     }
   }

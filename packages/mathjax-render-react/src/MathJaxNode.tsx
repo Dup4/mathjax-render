@@ -1,5 +1,5 @@
 import React from "react";
-import { Options, Tex2SVG } from "mathjax-render";
+import { Options, Tex2SVG } from "mathjax-render/browser";
 
 export interface MathJaxNodeProps extends Options {
   tex: string;

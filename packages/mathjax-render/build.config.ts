@@ -6,7 +6,7 @@ const browserEntry: MkdistBuildEntry = {
   input: "src",
   builder: "mkdist",
   format: "esm",
-  ext: "ts",
+  ext: "mjs",
 };
 
 export default defineBuildConfig({

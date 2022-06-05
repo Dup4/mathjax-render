@@ -4,7 +4,6 @@
     "src"
   ],
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
     "lib": [
       "DOM"
@@ -14,8 +13,8 @@
       "@/*": [
         "src/*"
       ],
-      "mathjax-render": [
-        "../mathjax-render/src/browser/index.ts"
+      "mathjax-render/browser": [
+        "./node_modules/mathjax-render/dist/esm/browser"
       ]
     }
   }
