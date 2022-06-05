@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { MathJaxNodeWithNoSSR } from "../components/mathjaxNodeWithNoSSR";
+import { MathJaxNodeWithNoSSR } from "@components/mathjaxNodeWithNoSSR";
 import { Grid, Textarea, useInput } from "@nextui-org/react";
 
 import styles from "./index.module.css";

@@ -1,6 +1,7 @@
 import { Grid } from "@nextui-org/react";
 import type { NextPage } from "next";
-import { MathJaxNodeWithNoSSR } from "../components/mathjaxNodeWithNoSSR";
+import { MathJaxNodeWithNoSSR } from "@components/mathjaxNodeWithNoSSR";
+
 import styles from "./index.module.css";
 
 const texList = [

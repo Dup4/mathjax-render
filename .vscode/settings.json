@@ -14,7 +14,8 @@
     "pnpm",
     "typecheck",
     "vite",
-    "vitest"
+    "vitest",
+    "nprogress"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
   "[typescript]": {
