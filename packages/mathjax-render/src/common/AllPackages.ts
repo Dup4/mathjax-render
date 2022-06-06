@@ -10,8 +10,6 @@ import "mathjax-full/js/input/tex/bussproofs/BussproofsConfiguration.js";
 import "mathjax-full/js/input/tex/cancel/CancelConfiguration.js";
 import "mathjax-full/js/input/tex/cases/CasesConfiguration.js";
 import "mathjax-full/js/input/tex/centernot/CenternotConfiguration.js";
-import "mathjax-full/js/input/tex/color/ColorConfiguration.js";
-import "mathjax-full/js/input/tex/colortbl/ColortblConfiguration.js";
 import "mathjax-full/js/input/tex/colorv2/ColorV2Configuration.js";
 import "mathjax-full/js/input/tex/configmacros/ConfigMacrosConfiguration.js";
 import "mathjax-full/js/input/tex/empheq/EmpheqConfiguration.js";
@@ -50,7 +48,6 @@ if (typeof MathJax !== "undefined" && MathJax.loader) {
     "[tex]/cancel",
     "[tex]/cases",
     "[tex]/centernot",
-    "[tex]/colortbl",
     "[tex]/colorv2",
     "[tex]/configmacros",
     "[tex]/empheq",
@@ -88,7 +85,6 @@ export const AllPackages: string[] = [
   "cancel",
   "cases",
   "centernot",
-  "colortbl",
   "colorv2",
   "configmacros",
   "empheq",
