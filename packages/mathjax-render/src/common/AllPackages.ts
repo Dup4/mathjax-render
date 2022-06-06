@@ -38,7 +38,7 @@ import "mathjax-full/js/input/tex/verb/VerbConfiguration.js";
 declare const MathJax: any;
 if (typeof MathJax !== "undefined" && MathJax.loader) {
   MathJax.loader.preLoad(
-    "input/tex-base",
+    "[tex]/base",
     "[tex]/action",
     "[tex]/ams",
     "[tex]/amscd",
@@ -50,7 +50,6 @@ if (typeof MathJax !== "undefined" && MathJax.loader) {
     "[tex]/cancel",
     "[tex]/cases",
     "[tex]/centernot",
-    "[tex]/color",
     "[tex]/colortbl",
     "[tex]/colorv2",
     "[tex]/configmacros",
@@ -89,7 +88,6 @@ export const AllPackages: string[] = [
   "cancel",
   "cases",
   "centernot",
-  "color",
   "colortbl",
   "colorv2",
   "configmacros",
