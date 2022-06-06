@@ -1,6 +1,7 @@
 import { Grid } from "@nextui-org/react";
 import type { NextPage } from "next";
-import { MathJaxNodeWithNoSSR } from "@components/mathjaxNodeWithNoSSR";
+import { MathJaxNodeWithNoSSR } from "@/components/mathjaxNodeWithNoSSR";
+import Link from "next/link";
 
 import styles from "./index.module.css";
 
@@ -275,6 +276,9 @@ const Reference: NextPage = () => {
     <>
       <div className={styles.container}>
         <Grid.Container gap={1} className={styles.main}>
+          <Grid>
+            <Link href="/">Home</Link>
+          </Grid>
           {texList.map((tex) => (
             <Grid key={tex}>
               <MathJaxNodeWithNoSSR

@@ -9,12 +9,17 @@ export default function Progress() {
     let timeout: NodeJS.Timeout;
 
     const start = () => {
-      timeout = setTimeout(NProgress.start, 100);
+      if (!timeout) {
+        timeout = setTimeout(NProgress.start, 10);
+      }
     };
 
     const done = () => {
-      clearTimeout(timeout);
-      NProgress.done();
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = undefined as unknown as NodeJS.Timeout;
+        NProgress.done();
+      }
     };
 
     router.events.on("routeChangeStart", start);

@@ -20,19 +20,16 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@styles/*": [
-        "./styles/*"
-      ],
-      "@components/*": [
-        "./components/*"
-      ],
+      "@/*": [
+        "src/*"
+      ]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next.config.js"
+    "next.config.mjs"
   ],
   "exclude": [
     "node_modules"

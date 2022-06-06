@@ -2,13 +2,21 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { MathJaxNodeWithNoSSR } from "@components/mathjaxNodeWithNoSSR";
+import { MathJaxNodeWithNoSSR } from "@/components/mathjaxNodeWithNoSSR";
 import { Grid, Textarea, useInput } from "@nextui-org/react";
 
 import styles from "./index.module.css";
+import { useRouter } from "next/router";
+// import { useEffect } from "react";
 
 const Home: NextPage = () => {
-  const { value: controlledValue, bindings } = useInput("");
+  const router = useRouter();
+
+  const { value: texContent, bindings } = useInput(router.query.tex as string);
+
+  // useEffect(() => {
+  //   setTexContent(router.query.tex as string);
+  // }, [setTexContent, router.query.tex]);
 
   return (
     <div className={styles.container}>
@@ -36,7 +44,7 @@ const Home: NextPage = () => {
           </Grid>
           <Grid>
             <MathJaxNodeWithNoSSR
-              tex={controlledValue}
+              tex={texContent}
               display={true}
             ></MathJaxNodeWithNoSSR>
           </Grid>
