@@ -6,17 +6,13 @@ import { MathJaxNodeWithNoSSR } from "@/components/mathjaxNodeWithNoSSR";
 import { Grid, Textarea, useInput } from "@nextui-org/react";
 
 import styles from "./index.module.css";
-import { useRouter } from "next/router";
-// import { useEffect } from "react";
 
-const Home: NextPage = () => {
-  const router = useRouter();
+interface IndexProps {
+  tex: string;
+}
 
-  const { value: texContent, bindings } = useInput(router.query.tex as string);
-
-  // useEffect(() => {
-  //   setTexContent(router.query.tex as string);
-  // }, [setTexContent, router.query.tex]);
+const Index: NextPage<IndexProps> = ({ tex }) => {
+  const { value: texContent, bindings } = useInput(tex);
 
   return (
     <div className={styles.container}>
@@ -63,4 +59,8 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+Index.getInitialProps = async ({ query }) => {
+  return { tex: (query.tex as string) || "" };
+};
+
+export default Index;
