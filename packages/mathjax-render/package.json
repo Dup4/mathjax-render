@@ -27,6 +27,7 @@
       "types": "./dist/index.d.ts"
     },
     "./browser": {
+      "require": "./dist/esm/browser/index.mjs",
       "import": "./dist/esm/browser/index.mjs",
       "types": "./dist/esm/browser/index.d.ts"
     }
