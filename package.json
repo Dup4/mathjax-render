@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.0.14",
+  "version": "0.0.15",
   "packageManager": "pnpm@7.1.8",
   "license": "MIT",
   "author": "Dup4 <lyuzhi.pan@gmail.com>",
