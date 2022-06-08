@@ -6,16 +6,17 @@
     "antfu",
     "arithmatex",
     "bumpp",
+    "camelcase",
     "esmo",
     "esno",
     "mathjax",
     "mkdocs",
     "nextui",
+    "nprogress",
     "pnpm",
     "typecheck",
     "vite",
-    "vitest",
-    "nprogress"
+    "vitest"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
   "[typescript]": {

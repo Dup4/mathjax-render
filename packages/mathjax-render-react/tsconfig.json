@@ -1,10 +1,11 @@
 {
   "extends": "../../tsconfig.base.json",
   "include": [
-    "src"
+    "src",
+    "typings.d.ts",
   ],
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "jsx": "react",
     "lib": [
       "DOM"
     ],
@@ -16,6 +17,6 @@
       "mathjax-render/browser": [
         "../mathjax-render/src/browser"
       ]
-    }
+    },
   }
 }

@@ -26,7 +26,10 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
-    "./browser": "./dist/esm/browser/index.mjs"
+    "./browser": {
+      "import": "./dist/esm/browser/index.mjs",
+      "types": "./dist/esm/browser/index.d.ts"
+    }
   },
   "browser": {
     "./dist/index.cjs": "./dist/esm/browser/index.ts",

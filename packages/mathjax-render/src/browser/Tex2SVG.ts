@@ -58,6 +58,7 @@ export function Tex2SVG(math: string, display: boolean, options?: Options) {
     if (options?.errorMessageClassNameList) {
       message.classList.add(...options.errorMessageClassNameList);
     } else {
+      // default style
       message.style.fontWeight = "bold";
       message.style.display = "inline-block";
       message.style.border = "2px solid #000";

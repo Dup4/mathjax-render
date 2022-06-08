@@ -131,5 +131,4 @@ foreignObject[data-mjx-xml] {
 .MathJax path {
   stroke-width: 3;
 }
-
 `;
