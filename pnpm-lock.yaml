@@ -15,7 +15,7 @@ importers:
       fsxx: ^0.0.5
       glob: ^8.0.3
       npm-run-all: ^4.1.5
-      pnpm: ^7.1.8
+      pnpm: ^7.2.1
       prettier: ^2.6.2
       typescript: ^4.6.4
       unbuild: ^0.7.4
@@ -34,7 +34,7 @@ importers:
       fsxx: 0.0.5
       glob: 8.0.3
       npm-run-all: 4.1.5
-      pnpm: 7.1.8
+      pnpm: 7.2.1
       prettier: 2.6.2
       typescript: 4.6.4
       unbuild: 0.7.4
@@ -4608,9 +4608,9 @@ packages:
       pathe: 0.2.0
     dev: true
 
-  /pnpm/7.1.8:
-    resolution: {integrity: sha512-6E+iGdkAcEtEvmxgLGpHiK51ArFK8mBUFIQ6/x5LeL+YCWbi1r1Fy2UPN1dDWUjy2xauLjgIMp/KQ5s5b85EBA==}
-    engines: {node: '>=14.19'}
+  /pnpm/7.2.1:
+    resolution: {integrity: sha512-Z2Wg7YHxeit2U+0aSj+doBPF9+ER0e3VLOGuJOQbk8rzIxK6zMtrQ0ICieCUGPWRM0Vbwj8yIcTKzO22Yhs/Cg==}
+    engines: {node: '>=14.6'}
     hasBin: true
     dev: true
 
