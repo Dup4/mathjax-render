@@ -49,6 +49,7 @@ importers:
       '@types/nprogress': ^0.2.0
       '@types/react': ^18.0.11
       '@types/react-dom': ^18.0.5
+      classname: ^0.0.0
       eslint: 8.17.0
       eslint-config-next: 12.1.6
       mathjax-render-react: workspace:*
@@ -59,6 +60,7 @@ importers:
       typescript: 4.7.3
     dependencies:
       '@nextui-org/react': 1.0.0-beta.7_ef5jwxihqo6n7gxfmzogljlgcm
+      classname: 0.0.0
       mathjax-render-react: link:../../packages/mathjax-render-react
       next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
       nprogress: 0.2.0
@@ -1937,6 +1939,10 @@ packages:
   /check-error/1.0.2:
     resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==}
     dev: true
+
+  /classname/0.0.0:
+    resolution: {integrity: sha512-kkhsspEJdUW+VhuvNzb2sQf0KbafDPfd36dB1qf03Uu42dWZwMQzaQuyNkaRr5ir0ZiAN0+TlH/EOOfwb/aaXg==}
+    dev: false
 
   /clsx/1.1.1:
     resolution: {integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==}

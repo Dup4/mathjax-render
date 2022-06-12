@@ -1,9 +1,11 @@
-import { Grid } from "@nextui-org/react";
 import type { NextPage } from "next";
-import { MathJaxNodeWithNoSSR } from "@/components/mathjaxNodeWithNoSSR";
-import Link from "next/link";
 
-import styles from "./index.module.css";
+import { Grid } from "@nextui-org/react";
+
+import MathJaxNode from "@/components/mathjaxNode";
+import BasicLayouts from "@/layouts/basicLayouts";
+
+import BasicLayoutsStyles from "@/layouts/basicLayouts.module.css";
 
 const texList = [
   String.raw`e^x`,
@@ -273,23 +275,15 @@ e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n
 
 const Reference: NextPage = () => {
   return (
-    <>
-      <div className={styles.container}>
-        <Grid.Container gap={1} className={styles.main}>
-          <Grid>
-            <Link href="/">Home</Link>
+    <BasicLayouts>
+      <Grid.Container gap={1} className={BasicLayoutsStyles.main}>
+        {texList.map((tex) => (
+          <Grid key={tex}>
+            <MathJaxNode tex={tex} display={true}></MathJaxNode>
           </Grid>
-          {texList.map((tex) => (
-            <Grid key={tex}>
-              <MathJaxNodeWithNoSSR
-                tex={tex}
-                display={true}
-              ></MathJaxNodeWithNoSSR>
-            </Grid>
-          ))}
-        </Grid.Container>
-      </div>
-    </>
+        ))}
+      </Grid.Container>
+    </BasicLayouts>
   );
 };
 

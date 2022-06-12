@@ -1,10 +1,11 @@
 import dynamic from "next/dynamic";
 
-const MathJaxNodeWithNoSSR = dynamic(
+const MathJaxNode = dynamic(
   async () => (await import("mathjax-render-react")).MathJaxNode,
   {
     ssr: false,
   },
 );
 
-export { MathJaxNodeWithNoSSR };
+export { MathJaxNode };
+export default MathJaxNode;
