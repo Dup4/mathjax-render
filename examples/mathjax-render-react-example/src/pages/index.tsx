@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -59,8 +59,12 @@ const Index: NextPage<IndexProps> = ({ tex }) => {
   );
 };
 
-Index.getInitialProps = async ({ query }) => {
-  return { tex: (query.tex as string) || "" };
+export const getServerSideProps: GetServerSideProps<IndexProps> = async (
+  context,
+) => {
+  return {
+    props: { tex: (context.query.tex as string) || "" },
+  };
 };
 
 export default Index;
