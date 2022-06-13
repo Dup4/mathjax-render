@@ -5,9 +5,9 @@ import { mathjax } from "mathjax-full/js/mathjax.js";
 import { TeX } from "mathjax-full/js/input/tex.js";
 import { SVG } from "mathjax-full/js/output/svg.js";
 
-// import { liteAdaptor } from "mathjax-full/ts/adaptors/liteAdaptor";
-import { JSDOM } from "jsdom";
-import { jsdomAdaptor } from "mathjax-full/js/adaptors/jsdomAdaptor.js";
+import { liteAdaptor } from "mathjax-full/js/adaptors/liteAdaptor";
+// import { JSDOM } from "jsdom";
+// import { jsdomAdaptor } from "mathjax-full/js/adaptors/jsdomAdaptor.js";
 
 import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html.js";
 
@@ -16,8 +16,12 @@ import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html.js";
 import { AllPackages } from "../common/AllPackages";
 import { GenerateErrorMessage, GetErrorMessage } from "../common/utils";
 
-// const adaptor = liteAdaptor();
-const adaptor = jsdomAdaptor(JSDOM);
+// const adaptor = jsdomAdaptor(JSDOM);
+
+const adaptor = liteAdaptor();
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const handler = RegisterHTMLHandler(adaptor);
 
