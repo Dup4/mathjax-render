@@ -1,4 +1,6 @@
 dist
 node_modules
-.next
 out
+.next
+
+examples/mathjax-render-react-example/*.config.js

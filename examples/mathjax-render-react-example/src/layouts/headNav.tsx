@@ -21,6 +21,7 @@ const tabList = [
   },
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const HeadNav: NextPage<HeadNavProps> = (props) => {
   return (
     <Grid.Container gap={1} className={styles.navbar}>
