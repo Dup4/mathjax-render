@@ -1,4 +1,5 @@
 import type { GetServerSideProps, NextPage } from "next";
+import { useEffect, useState } from "react";
 
 import { Grid, Textarea, useInput } from "@nextui-org/react";
 
