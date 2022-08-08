@@ -1,10 +1,10 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { ReactNode } from "react";
 
-import HeadNav from "./headNav";
+import ImageWithTheme from "@/components/ImageWithTheme";
 
+import HeadNav from "./headNav";
 import styles from "./basicLayouts.module.css";
 
 const BasicLayouts: NextPage<{ children: ReactNode }> = ({ children }) => {
@@ -24,7 +24,14 @@ const BasicLayouts: NextPage<{ children: ReactNode }> = ({ children }) => {
         <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
           Powered by{" "}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <ImageWithTheme
+              alt="Vercel Logo"
+              light="/vercel-light.svg"
+              dark="/vercel-dark.svg"
+              width={72}
+              height={16}
+            >
+            </ImageWithTheme>
           </span>
         </a>
       </footer>
