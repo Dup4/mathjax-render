@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import { createTheme, NextUIProvider } from "@nextui-org/react";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { ThemeProvider } from "next-themes";
 
 import NProgress from "@/components/nprogress";
 
@@ -9,6 +9,7 @@ import "@/styles/nprogress.css";
 
 const lightTheme = createTheme({
   type: "light",
+  className: "light",
   theme: {
     colors: {},
   },
@@ -16,6 +17,7 @@ const lightTheme = createTheme({
 
 const darkTheme = createTheme({
   type: "dark",
+  className: "dark",
   theme: {
     colors: {},
   },
@@ -23,19 +25,18 @@ const darkTheme = createTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <NextThemesProvider
-      defaultTheme={lightTheme.className}
+    <ThemeProvider
+      defaultTheme="system"
       attribute="class"
       value={{
         light: lightTheme.className,
         dark: darkTheme.className,
-      }}
-    >
+      }}>
       <NextUIProvider>
         <NProgress />
         <Component {...pageProps} />
       </NextUIProvider>
-    </NextThemesProvider>
+    </ThemeProvider>
   );
 }
 

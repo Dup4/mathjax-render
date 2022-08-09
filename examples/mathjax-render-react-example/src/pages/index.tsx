@@ -2,10 +2,8 @@ import type { GetServerSideProps, NextPage } from "next";
 
 import { Grid, Textarea, useInput } from "@nextui-org/react";
 
-import MathJaxNode from "@/components/mathjaxNode";
 import BasicLayouts from "@/layouts/basicLayouts";
-
-import BasicLayoutsStyles from "@/layouts/basicLayouts.module.css";
+import MathJaxNode from "@/components/mathjaxNode";
 
 interface IndexProps {
   tex: string;
@@ -16,7 +14,10 @@ const Index: NextPage<IndexProps> = ({ tex }) => {
 
   return (
     <BasicLayouts>
-      <Grid.Container gap={1} className={BasicLayoutsStyles.main}>
+      <Grid.Container
+        gap={1}
+        className="flex flex-1 justify-center items-center flex-col"
+        style={{ minHeight: "calc(100vh - 300px)" }}>
         <Grid>
           <Textarea
             size="lg"
@@ -25,8 +26,7 @@ const Index: NextPage<IndexProps> = ({ tex }) => {
             maxRows={8}
             bordered
             labelPlaceholder="Please input Tex"
-            {...bindings}
-          ></Textarea>
+            {...bindings}></Textarea>
         </Grid>
         <Grid>
           <MathJaxNode tex={texContent} display={true}></MathJaxNode>

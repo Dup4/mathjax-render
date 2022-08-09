@@ -3,10 +3,7 @@ import type { NextPage } from "next";
 import { Grid } from "@nextui-org/react";
 
 import BasicLayouts from "@/layouts/basicLayouts";
-
 import { MathJaxNode } from "@/components/mathjaxNode";
-
-import BasicLayoutsStyles from "@/layouts/basicLayouts.module.css";
 
 interface ReferenceProps {
   texList: string[];
@@ -15,7 +12,10 @@ interface ReferenceProps {
 const Reference: NextPage<ReferenceProps> = ({ texList }) => {
   return (
     <BasicLayouts>
-      <Grid.Container gap={1} className={BasicLayoutsStyles.main}>
+      <Grid.Container
+        gap={1}
+        className="flex flex-1 justify-center items-center flex-col"
+        style={{ minHeight: "calc(100vh - 300px)" }}>
         {texList.map((tex, index) => (
           <Grid key={index}>
             <MathJaxNode tex={tex} display={true}></MathJaxNode>
@@ -130,7 +130,7 @@ export async function getStaticProps() {
   3 & 3 & 2 & 1 & 0
   \end{array}
   \end{array}`,
-    String.raw`$$\begin{array}{ll} \hfill\mathrm{Bad}\hfill & \hfill\mathrm{Better}\hfill \\ \hline \\ e^{i\frac{\pi}2} \quad e^{\frac{i\pi}2}& e^{i\pi/2} \\ \int_{-\frac\pi2}^\frac\pi2 \sin x\,dx & \int_{-\pi/2}^{\pi/2}\sin x\,dx \\ \end{array}`,
+    String.raw`\begin{array}{ll} \hfill\mathrm{Bad}\hfill & \hfill\mathrm{Better}\hfill \\ \hline \\ e^{i\frac{\pi}2} \quad e^{\frac{i\pi}2}& e^{i\pi/2} \\ \int_{-\frac\pi2}^\frac\pi2 \sin x\,dx & \int_{-\pi/2}^{\pi/2}\sin x\,dx \\ \end{array}`,
     String.raw`\left\{
   \begin{array}{c}
   a_1x+b_1y+c_1z=d_1 \\

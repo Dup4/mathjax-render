@@ -46,12 +46,13 @@ importers:
     specifiers:
       '@nextui-org/react': 1.0.0-beta.7
       '@tailwindcss/typography': ^0.5.4
+      '@types/classnames': ^2.3.1
       '@types/node': 17.0.39
       '@types/nprogress': ^0.2.0
       '@types/react': ^18.0.16
       '@types/react-dom': ^18.0.6
       autoprefixer: ^10.4.8
-      classname: ^0.0.0
+      classnames: ^2.3.1
       eslint: 8.17.0
       eslint-config-next: 12.1.6
       eslint-config-prettier: ^8.5.0
@@ -65,10 +66,12 @@ importers:
       react-dom: ^18.2.0
       tailwindcss: ^3.1.8
       typescript: 4.7.3
+      use-delayed-render: ^0.0.7
     dependencies:
       '@nextui-org/react': 1.0.0-beta.7_biqbaboplfbrettd7655fr4n2y
       '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.8
-      classname: 0.0.0
+      '@types/classnames': 2.3.1
+      classnames: 2.3.1
       mathjax-render: link:../../packages/mathjax-render
       mathjax-render-react: link:../../packages/mathjax-render-react
       next: 12.2.4_biqbaboplfbrettd7655fr4n2y
@@ -77,6 +80,7 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       tailwindcss: 3.1.8
+      use-delayed-render: 0.0.7_react@18.2.0
     devDependencies:
       '@types/node': 17.0.39
       '@types/nprogress': 0.2.0
@@ -1393,6 +1397,13 @@ packages:
     resolution: {integrity: sha512-TNeRJV5O1L0s7NM4Xg9q8HPbLnyAMQ9twPMul53hWRld//NnjV/VSw7InBCNrPJyWBPhyoSLlzR2mR9Fq5nJTg==}
     dev: true
 
+  /@types/classnames/2.3.1:
+    resolution: {integrity: sha512-zeOWb0JGBoVmlQoznvqXbE0tEC/HONsnoUNH19Hc96NFsTAwTXbTqb8FMYkru1F/iqp7a18Ws3nWJvtA1sHD1A==}
+    deprecated: This is a stub types definition. classnames provides its own type definitions, so you do not need this installed.
+    dependencies:
+      classnames: 2.3.1
+    dev: false
+
   /@types/debug/4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
@@ -2069,8 +2080,8 @@ packages:
       fsevents: 2.3.2
     dev: false
 
-  /classname/0.0.0:
-    resolution: {integrity: sha512-kkhsspEJdUW+VhuvNzb2sQf0KbafDPfd36dB1qf03Uu42dWZwMQzaQuyNkaRr5ir0ZiAN0+TlH/EOOfwb/aaXg==}
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
     dev: false
 
   /clsx/1.2.1:
@@ -5956,6 +5967,14 @@ packages:
     dependencies:
       punycode: 2.1.1
     dev: true
+
+  /use-delayed-render/0.0.7_react@18.2.0:
+    resolution: {integrity: sha512-Lb4Sd4P50CYRQ5k2Y9SRjMDTBG3Ous7TmfCGOzabKZf3ibQwIuyF3M2q6iiGLH+BicXZJumXgJDeHRnAfZM7Gg==}
+    peerDependencies:
+      react: ^16.13.1
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /use-sync-external-store/1.2.0_react@18.2.0:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
