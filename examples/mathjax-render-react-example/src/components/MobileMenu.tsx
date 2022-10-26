@@ -51,15 +51,15 @@ export default function MobileMenu() {
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: "150ms" }}>
-            <Link href="/">
-              <a className="flex w-auto pb-4">Home</a>
+            <Link href="/" className="flex w-auto pb-4">
+              Home
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: "175ms" }}>
-            <Link href="/reference">
-              <a className="flex w-auto pb-4">Reference</a>
+            <Link href="/reference" className="flex w-auto pb-4">
+              Reference
             </Link>
           </li>
         </ul>
