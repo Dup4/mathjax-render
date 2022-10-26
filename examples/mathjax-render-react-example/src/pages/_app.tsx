@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
-import { createTheme, NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider } from "next-themes";
+import { createTheme, NextUIProvider } from "@nextui-org/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import NProgress from "@/components/nprogress";
 
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextUIProvider>
         <NProgress />
         <Component {...pageProps} />
+        <Analytics />
       </NextUIProvider>
     </ThemeProvider>
   );
