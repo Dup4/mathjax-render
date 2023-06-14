@@ -47,17 +47,17 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@types/jsdom": "^16.2.14",
-    "cac": "^6.7.12",
-    "chalk": "^5.0.1",
+    "@types/jsdom": "^16.2.15",
+    "cac": "^6.7.14",
+    "chalk": "^5.2.0",
     "debug": "^4.3.4",
-    "glob": "^8.0.3",
+    "glob": "^8.1.0",
     "jsdom": "^19.0.0",
-    "kolorist": "^1.5.1",
+    "kolorist": "^1.8.0",
     "mathjax-render": "workspace:*",
     "piscina": "^3.2.0"
   },
   "devDependencies": {
-    "@types/debug": "^4.1.7"
+    "@types/debug": "^4.1.8"
   }
 }

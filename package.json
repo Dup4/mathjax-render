@@ -1,7 +1,7 @@
 {
   "private": true,
   "version": "0.0.17",
-  "packageManager": "pnpm@7.14.0",
+  "packageManager": "pnpm@8.6.2",
   "license": "MIT",
   "author": "Dup4 <lyuzhi.pan@gmail.com>",
   "repository": {
@@ -27,22 +27,23 @@
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "devDependencies": {
-    "@babel/types": "^7.19.4",
+    "@babel/types": "^7.22.5",
     "@types/glob": "^7.2.0",
     "@types/node": "^17.0.45",
-    "@typescript-eslint/eslint-plugin": "^5.41.0",
-    "@typescript-eslint/parser": "^5.41.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
     "bumpp": "^7.2.0",
-    "eslint": "^8.26.0",
+    "eslint": "^8.42.0",
     "esmo": "^0.14.1",
     "fsxx": "^0.0.5",
-    "glob": "^8.0.3",
+    "glob": "^8.1.0",
     "npm-run-all": "^4.1.5",
-    "pnpm": "^7.14.0",
-    "prettier": "^2.7.1",
-    "typescript": "^4.8.4",
+    "pnpm": "^8.6.2",
+    "prettier": "^2.8.8",
+    "taze": "^0.10.2",
+    "typescript": "^4.9.5",
     "unbuild": "^0.7.6",
-    "vite": "^2.9.15",
+    "vite": "^2.9.16",
     "vitest": "^0.7.13",
     "zx": "^6.2.5"
   }
