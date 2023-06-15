@@ -3,7 +3,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import { Grid, Textarea, useInput } from "@nextui-org/react";
 
 import BasicLayouts from "@/layouts/basicLayouts";
-import MathJaxNode from "@/components/mathjaxNode";
+import { MathJaxNode } from "@/components/mathjaxNode";
 
 interface IndexProps {
   tex: string;
