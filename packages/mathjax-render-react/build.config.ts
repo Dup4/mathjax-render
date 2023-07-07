@@ -13,7 +13,7 @@ export default defineBuildConfig({
   },
   hooks: {
     "rollup:options": (ctx: BuildContext, options: RollupOptions): void => {
-      options.plugins.push(
+      options.plugins?.push(
         postcss({
           inject: true,
           use: ["less"],

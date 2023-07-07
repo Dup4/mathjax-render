@@ -11,7 +11,7 @@
         "src/*"
       ],
       "mathjax-render": [
-        "../mathjax-render/src/index.ts"
+        "../mathjax-render/src/node/index.ts"
       ]
     }
   }
