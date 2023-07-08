@@ -1,7 +1,7 @@
-import { Container } from "@/components/Container";
-import { MathJaxNode } from "@/components/mathjaxNode";
+import { Container } from "@/components/container";
+import { MathJaxNode } from "@components/mathjax-node";
 
-import { getTexList } from "@/lib/texList";
+import { getTexList } from "@/lib/tex-list";
 
 export default function Page() {
   const texList = getTexList();

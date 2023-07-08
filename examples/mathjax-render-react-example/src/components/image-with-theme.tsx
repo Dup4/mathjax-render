@@ -13,3 +13,5 @@ export default function ImageWithTheme(props: any) {
     />
   );
 }
+
+export { ImageWithTheme };

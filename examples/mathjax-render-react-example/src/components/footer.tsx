@@ -1,7 +1,8 @@
 import Link from "next/link";
-import ImageWithTheme from "./ImageWithTheme";
 
-import { GITHUB_URL } from "@lib/constant";
+import { ImageWithTheme } from "@/components/image-with-theme";
+
+import { GITHUB_URL } from "@/lib/constant";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ExternalLink = ({ href, children }: any) => (

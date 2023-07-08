@@ -10,8 +10,8 @@ import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { DOMAIN } from "@/lib/constant";
 
-import Footer from "@components/Footer";
-import MobileMenu from "@components/MobileMenu";
+import Footer from "@/components/footer";
+import MobileMenu from "@/components/mobile-menu";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function NavItem({ href, text }: any) {

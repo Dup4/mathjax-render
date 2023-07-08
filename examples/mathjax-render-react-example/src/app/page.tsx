@@ -3,8 +3,8 @@
 import React, { ChangeEventHandler, useState, useCallback } from "react";
 
 import { Textarea } from "@/components/ui/textarea";
-import { Container } from "@components/Container";
-import { MathJaxNode } from "@/components/mathjaxNode";
+import { Container } from "@/components/container";
+import { MathJaxNode } from "@/components/mathjax-node";
 
 export default function Page() {
   const [texValue, setTexValue] = useState("");
