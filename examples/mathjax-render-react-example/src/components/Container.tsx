@@ -1,17 +1,22 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import cn from "classnames";
+
+import { cn } from "@/lib/utils";
+import { DOMAIN } from "@/lib/constant";
 
 import Footer from "@components/Footer";
 import MobileMenu from "@components/MobileMenu";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function NavItem({ href, text }: any) {
-  const router = useRouter();
-  const isActive = router.asPath === href;
+  const pathname = usePathname();
+  const isActive = pathname == href;
 
   return (
     <Link
@@ -28,17 +33,15 @@ function NavItem({ href, text }: any) {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function Container(props: any) {
+const Container: React.FC<any> = (props: any) => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
 
-  const hostName = "https://mathjax-render.vercel.app";
-
   const { children, ...customMeta } = props;
-  const router = useRouter();
+  const pathname = usePathname();
   const meta = {
     title: "MathJax Render",
     description: `Mathjax Render.`,
@@ -48,13 +51,13 @@ export default function Container(props: any) {
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900">
+    <div className="bg-gray-50 dark:bg-gray-900 flex flex-col min-h-screen">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`${hostName}${router.asPath}`} />
-        <link rel="canonical" href={`${hostName}${router.asPath}`} />
+        <meta property="og:url" content={`${DOMAIN}${pathname}`} />
+        <link rel="canonical" href={`${DOMAIN}${pathname}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="MathJax Render" />
         <meta property="og:description" content={meta.description} />
@@ -104,12 +107,14 @@ export default function Container(props: any) {
         </nav>
       </div>
 
-      <main
-        id="skip"
-        className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900">
+      <main id="skip" className="flex flex-1">
         {children}
-        <Footer />
       </main>
+
+      <Footer />
     </div>
   );
-}
+};
+
+export { Container };
+export default Container;

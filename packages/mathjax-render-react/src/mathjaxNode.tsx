@@ -30,8 +30,7 @@ export const MathJaxNode: React.FC<MathJaxNodeProps> = (props) => {
       <div
         dangerouslySetInnerHTML={{
           __html: html,
-        }}
-      ></div>
+        }}></div>
     );
   }
 
@@ -39,7 +38,6 @@ export const MathJaxNode: React.FC<MathJaxNodeProps> = (props) => {
     <span
       dangerouslySetInnerHTML={{
         __html: html,
-      }}
-    ></span>
+      }}></span>
   );
 };
