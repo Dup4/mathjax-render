@@ -1,19 +1,19 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../../tsconfig.base.json",
   "include": [
-    "src",
-    "typings.d.ts",
+    "src"
   ],
   "compilerOptions": {
-    "jsx": "react",
     "lib": [
-      "DOM"
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
     ],
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
-      ],
-    },
+      ]
+    }
   }
 }

@@ -24,10 +24,10 @@
         "src/*"
       ],
       "mathjax-render": [
-        "../../packages/mathjax-render/src/node/index.ts"
+        "../../libs/mathjax-render/src/node/index.ts"
       ],
       "mathjax-render-nextjs": [
-        "../../packages/mathjax-render-nextjs/src/index.ts",
+        "../../libs/mathjax-render-nextjs/src/index.ts",
       ]
     },
     "plugins": [

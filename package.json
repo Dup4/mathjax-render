@@ -13,12 +13,12 @@
     "url": "https://github.com/Dup4/mathjax-render/issues"
   },
   "scripts": {
-    "build": "pnpm -r --filter=./packages/* run build",
-    "dev": "pnpm -r --parallel --filter=./packages/* run dev",
-    "start": "pnpm -r --parallel --filter=./packages/* run start",
+    "build": "pnpm -r --filter=./packages/**/* run build",
+    "dev": "pnpm -r --parallel --filter=./packages/**/* run dev",
+    "start": "pnpm -r --parallel --filter=./packages/**/* run start",
     "test": "vitest",
     "lint": "run-p lint:*",
-    "lint:build": "pnpm -r --parallel --filter=./packages/* run lint:build",
+    "lint:build": "pnpm -r --parallel --filter=./packages/**/* run lint:build",
     "lint:eslint": "eslint .",
     "lint:style": "prettier --check ./packages/**/*.ts",
     "format": "run-p format:*",

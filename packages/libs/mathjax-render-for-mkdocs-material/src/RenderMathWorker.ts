@@ -4,6 +4,7 @@ import { RenderMathJax } from "./RenderMathJax";
 
 const { green, yellow } = chalk;
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function (filename: string): void {
   const startTime = +new Date();
 
