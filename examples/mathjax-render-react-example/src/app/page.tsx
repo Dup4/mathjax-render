@@ -2,9 +2,10 @@
 
 import React, { ChangeEventHandler, useState, useCallback } from "react";
 
+import { MathJaxNode } from "mathjax-render-nextjs";
+
 import { Textarea } from "@/components/ui/textarea";
 import { Container } from "@/components/container";
-import { MathJaxNode } from "@/components/mathjax-node";
 
 export default function Page() {
   const [texValue, setTexValue] = useState("");

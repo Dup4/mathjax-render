@@ -1,6 +1,6 @@
 import React from "react";
 import { Options, Tex2SVG } from "mathjax-render/browser";
-import style from "./mathjaxNode.module.less";
+import style from "./mathjax-node.module.less";
 
 export interface MathJaxNodeProps extends Options {
   tex: string;

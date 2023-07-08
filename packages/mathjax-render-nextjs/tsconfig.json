@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "src",
+    "typings.d.ts",
+  ],
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": [
+      "DOM"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+    },
+  }
+}

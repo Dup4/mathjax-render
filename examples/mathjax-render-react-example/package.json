@@ -15,7 +15,7 @@
     "clsx": "^1.2.1",
     "lucide-react": "^0.258.0",
     "mathjax-render": "workspace:*",
-    "mathjax-render-react": "workspace:*",
+    "mathjax-render-nextjs": "workspace:*",
     "next": "^13.4.9",
     "next-themes": "^0.2.1",
     "nextjs-toploader": "^1.4.2",

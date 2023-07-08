@@ -1,5 +1,6 @@
+import { MathJaxNode } from "mathjax-render-nextjs";
+
 import { Container } from "@/components/container";
-import { MathJaxNode } from "@components/mathjax-node";
 
 import { getTexList } from "@/lib/tex-list";
 
