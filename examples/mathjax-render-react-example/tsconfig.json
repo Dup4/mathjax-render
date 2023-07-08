@@ -22,13 +22,23 @@
     "paths": {
       "@*": [
         "src/*"
-      ]
-    }
+      ],
+      "mathjax-render": [
+        "../../packages/mathjax-render/src/node/index.ts"
+      ],
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

@@ -2,11 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  // experimental: {
-  //   fontLoaders: [
-  //     { loader: "@next/font/google", options: { subsets: ["latin"] } },
-  //   ],
-  // },
+  transpilePackages: ["mathjax-render", "mathjax-render-react"],
 };
 
 module.exports = nextConfig;
