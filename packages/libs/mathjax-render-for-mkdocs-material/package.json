@@ -55,7 +55,8 @@
     "jsdom": "^19.0.0",
     "kolorist": "^1.8.0",
     "mathjax-render": "workspace:*",
-    "piscina": "^3.2.0"
+    "piscina": "^3.2.0",
+    "typescript": "5.1.6"
   },
   "devDependencies": {
     "@types/debug": "^4.1.8"

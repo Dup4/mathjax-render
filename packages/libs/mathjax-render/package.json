@@ -61,7 +61,8 @@
   },
   "dependencies": {
     "escape-html": "^1.0.3",
-    "mathjax-full": "3.2.0"
+    "mathjax-full": "3.2.0",
+    "typescript": "5.1.6"
   },
   "devDependencies": {
     "@types/escape-html": "^1.0.2",
