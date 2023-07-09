@@ -6,12 +6,12 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dup4/mathjax-render.git",
-    "directory": "packages/mathjax-render-for-mkdocs-material"
+    "directory": "packages/libs/mathjax-render-for-mkdocs-material"
   },
   "bugs": {
     "url": "https://github.com/Dup4/mathjax-render/issues"
   },
-  "homepage": "https://github.com/Dup4/mathjax-render/tree/main/packages/mathjax-render-for-mkdocs-material#readme",
+  "homepage": "https://github.com/Dup4/mathjax-render/tree/main/packages/libs/mathjax-render-for-mkdocs-material#readme",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
