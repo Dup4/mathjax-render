@@ -2,7 +2,6 @@
   "extends": "../../../tsconfig.base.json",
   "include": [
     "src",
-    "typings.d.ts",
   ],
   "compilerOptions": {
     "jsx": "react",
@@ -14,6 +13,9 @@
       "@/*": [
         "src/*"
       ],
+      "mathjax-render-react": [
+        "../mathjax-render-react/src/index.ts"
+      ]
     },
   }
 }
