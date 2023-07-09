@@ -13,18 +13,18 @@
     "url": "https://github.com/Dup4/mathjax-render/issues"
   },
   "scripts": {
-    "build": "pnpm -r --filter=./packages/* run build",
-    "dev": "pnpm -r --parallel --filter=./packages/* run dev",
-    "start": "pnpm -r --parallel --filter=./packages/* run start",
+    "build": "pnpm -r --filter=./packages/**/* run build",
+    "dev": "pnpm -r --parallel --filter=./packages/**/* run dev",
+    "start": "pnpm -r --parallel --filter=./packages/**/* run start",
     "test": "vitest",
     "lint": "run-p lint:*",
-    "lint:build": "pnpm -r --parallel --filter=./packages/* run lint:build",
+    "lint:build": "pnpm -r --parallel --filter=./packages/**/* run lint:build",
     "lint:eslint": "eslint .",
     "lint:style": "prettier --check ./packages/**/*.ts",
     "format": "run-p format:*",
     "format:eslint": "eslint --fix .",
     "format:style": "prettier --write ./packages/**/*.ts",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+    "release": "bumpp package.json packages/**/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "devDependencies": {
     "@babel/types": "^7.22.5",
@@ -34,6 +34,7 @@
     "@typescript-eslint/parser": "^5.61.0",
     "bumpp": "^7.2.0",
     "eslint": "^8.44.0",
+    "eslint-config-next": "13.0.0",
     "esmo": "^0.14.1",
     "fsxx": "^0.0.5",
     "glob": "^8.1.0",

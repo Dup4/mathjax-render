@@ -3,4 +3,4 @@ node_modules
 out
 .next
 
-examples/mathjax-render-react-example/*.config.js
+packages/examples/mathjax-render-react-example/*.config.js

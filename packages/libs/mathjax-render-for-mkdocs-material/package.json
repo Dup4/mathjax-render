@@ -1,0 +1,63 @@
+{
+  "name": "mathjax-render-for-mkdocs-material",
+  "version": "0.0.19",
+  "license": "MIT",
+  "author": "Dup4 <lyuzhi.pan@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dup4/mathjax-render.git",
+    "directory": "packages/mathjax-render-for-mkdocs-material"
+  },
+  "bugs": {
+    "url": "https://github.com/Dup4/mathjax-render/issues"
+  },
+  "homepage": "https://github.com/Dup4/mathjax-render/tree/main/packages/mathjax-render-for-mkdocs-material#readme",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "bin": {
+    "mathjax-render-for-mkdocs-material": "./cli.mjs"
+  },
+  "files": [
+    "src",
+    "dist",
+    "*.mjs"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "start": "esmo src/cli.ts",
+    "test": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@types/jsdom": "^16.2.15",
+    "cac": "^6.7.14",
+    "chalk": "^5.3.0",
+    "debug": "^4.3.4",
+    "glob": "^8.1.0",
+    "jsdom": "^19.0.0",
+    "kolorist": "^1.8.0",
+    "mathjax-render": "workspace:*",
+    "piscina": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.8"
+  }
+}
