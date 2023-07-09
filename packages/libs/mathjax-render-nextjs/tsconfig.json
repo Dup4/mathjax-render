@@ -12,9 +12,6 @@
     "paths": {
       "@/*": [
         "src/*"
-      ],
-      "mathjax-render-react": [
-        "../mathjax-render-react/src/index.ts"
       ]
     },
   }
