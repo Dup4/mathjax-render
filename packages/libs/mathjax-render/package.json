@@ -6,12 +6,12 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dup4/mathjax-render.git",
-    "directory": "packages/mathjax-render"
+    "directory": "packages/libs/mathjax-render"
   },
   "bugs": {
     "url": "https://github.com/Dup4/mathjax-render/issues"
   },
-  "homepage": "https://github.com/Dup4/mathjax-render/tree/main/packages/mathjax-render#readme",
+  "homepage": "https://github.com/Dup4/mathjax-render/tree/main/packages/libs/mathjax-render#readme",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -61,7 +61,8 @@
   },
   "dependencies": {
     "escape-html": "^1.0.3",
-    "mathjax-full": "3.2.0"
+    "mathjax-full": "3.2.0",
+    "typescript": "5.1.6"
   },
   "devDependencies": {
     "@types/escape-html": "^1.0.2",

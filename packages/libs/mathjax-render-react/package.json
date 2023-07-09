@@ -6,12 +6,12 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dup4/mathjax-render.git",
-    "directory": "packages/mathjax-render-react"
+    "directory": "packages/libs/mathjax-render-react"
   },
   "bugs": {
     "url": "https://github.com/Dup4/mathjax-render/issues"
   },
-  "homepage": "https://github.com/Dup4/mathjax-render/tree/main/packages/mathjax-render-react#readme",
+  "homepage": "https://github.com/Dup4/mathjax-render/tree/main/packages/libs/mathjax-render-react#readme",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -57,6 +57,6 @@
     "react-dom": "^18.2.0",
     "rollup": "^2.79.1",
     "rollup-plugin-postcss": "^4.0.2",
-    "typescript": "4.7.3"
+    "typescript": "5.1.6"
   }
 }
