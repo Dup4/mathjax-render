@@ -1,1 +1,1 @@
-./packages/mathjax-render/README.md
+./packages/libs/mathjax-render/README.md
