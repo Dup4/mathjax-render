@@ -41,5 +41,6 @@
     "postcss": "^8.4.25",
     "shadcn-ui": "^0.3.0",
     "typescript": "5.1.6"
-  }
+  },
+  "version": "0.0.20"
 }
